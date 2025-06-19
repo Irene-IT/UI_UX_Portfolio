@@ -1,5 +1,4 @@
-import CarouselWithContent from "../components/Carusel";
-// import { testimonials } from "../constants";
+import TestimonialSlider from "../components/TestimonialSlider";
 
 const Testimonials = () => {
   return (
@@ -8,9 +7,8 @@ const Testimonials = () => {
           <h2 className="text-center">
             Kind words from satisfied clients
           </h2>
-          <CarouselWithContent />
+          <TestimonialSlider />
         </div>
-  
     </section>
   );
 };
