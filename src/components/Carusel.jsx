@@ -247,69 +247,61 @@ const TestimonialSlider = () => {
   };
 
   return (
-    // <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
-    // <div className="w-4/5 max-w-[812px] h-[400px] flex justify-between flex-col items-center gap-4">
-    //   {/* Slides wrapper with touch events */}
-    //   <div
-    //     className="flex gap-4 lg:gap-10 transition-all duration-500 ease-in-out size-full"
-    //     style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-    //     onTouchStart={handleTouchStart}
-    //     onTouchMove={handleTouchMove}
-    //     onTouchEnd={handleTouchEnd}
-    //   >
-    //     {testimonials.map((t, index) => (
-    //       <div key={index} className="inset-0 shrink-0 bg-card size-full">
-    //         <div className="card size-full">
-    //           <div className="flex items-center gap-4 mb-4">
-    //             <img
-    //               src={t.avatar}
-    //               alt={t.name}
-    //               className="w-[50px] h-[50px] rounded-full object-cover"
-    //             />
-    //             <div>
-    //               <p className="text-xl md:text-2xl font-semibold">{t.name}</p>
-    //               <p className="text-sm md:text-xl font-normal float-left text-gold-50 flex items-center gap-2">
-    //                 {t.title}
-    //               </p>
-    //             </div>
-    //           </div>
-    //           <p className="font-light text-sm md:text-xl text-[--color-blue-50]">
-    //             {t.text}
-    //           </p>
-    //         </div>
-    //       </div>
-    //     ))}
-    //   </div>
+    <div className="relative w-full max-w-4xl flex justify-center overflow-hidden">
+      <div className="w-4/5 max-w-[812px] h-[400px] flex justify-between flex-col items-center gap-4">
+        {/* Slides wrapper with touch events */}
+        <div
+          className="flex gap-4 lg:gap-10 transition-all duration-500 ease-in-out size-full"
+          style={{ transform: `translateX(-${currentIndex * 105.5}%)` }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {testimonials.map((t, index) => (
+            <div key={index} className="inset-0 shrink-0 bg-card size-full">
+              <div className="card size-full">
+                <div className="flex items-center gap-4 mb-4">
+                  <img
+                    src={t.avatar}
+                    alt={t.name}
+                    className="w-[50px] h-[50px] rounded-full object-cover"
+                  />
+                  <div>
+                    <p className="text-xl md:text-2xl font-semibold">
+                      {t.name}
+                    </p>
+                    <p className="text-sm md:text-xl font-normal float-left text-gold-50 flex items-center gap-2">
+                      {t.title}
+                    </p>
+                  </div>
+                </div>
+                <p className="font-light text-sm md:text-xl text-[--color-blue-50]">
+                  {t.text}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
 
-    //   {/* Arrows */}
-    //   <div className="flex">
-    //     <button
-    //       onClick={handlePrev}
-    //       className="left-2 text-3xl text-white bg-black/40 px-3 py-1 rounded-full hover:bg-black/60"
-    //     >
-    //       ❮
-    //     </button>
-    //     <button
-    //       onClick={handleNext}
-    //       className=" right-2 text-3xl text-white bg-black/40 px-3 py-1 rounded-full hover:bg-black/60"
-    //     >
-    //       ❯
-    //     </button>
-    //   </div>
-    // </div>
-
-// ===========================
-
-
-
-<div className="carousel carousel--scroll-buttons carousel--inert">
-  <div className="carousel__slide" >…</div>
-  <div className="carousel__slide" >…</div>
-</div>
-
-
-
-
+        {/* Arrows */}
+        <div className="flex">
+          <button
+            onClick={handlePrev}
+            className="left-2 btn-arrow"
+          >
+            {/* ❮ */}
+            ↜
+          </button>
+          <button
+            onClick={handleNext}
+            className=" right-2 btn-arrow"
+          >
+            {/* ❯ */}
+            ↝
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 

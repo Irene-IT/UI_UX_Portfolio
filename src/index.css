@@ -281,52 +281,12 @@ h2 {
   @apply  p-6 rounded-[1.2rem];
   background: linear-gradient(135deg, #0d1120 0%, #3a4b8a 43%, #0d1120 100%);
 }
+ .btn-arrow {
+  @apply text-3xl text-[#B231C6] px-3 py-1 rounded-full;
+   background: linear-gradient(90deg, #161A31 3.4%, #06091F 100%);
+ }
 
-/* ======================== */
-/* Base Carousel styles */
-.carousel {
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  anchor-name: --carousel;
-
-  > .carousel__slide {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-  }
-}
-/* Scroll Button styles */
-.carousel--scroll-buttons {
-  &::scroll-button(*) {
-    position: fixed;
-    position-anchor: --carousel;
-    font-family: "Material Symbols Outlined";
-  }
-
-  &::scroll-button(right) {
-    position-area: inline-end center;
-    content: 'arrow_forward' / 'Next';
-  }
-
-  &::scroll-button(left) {
-    position-area: inline-start center;
-    content: 'arrow_back' / 'Previous';
-  }
-}
-/* Inert Interactivity styles */
-.carousel--inert > .carousel__slide {
-  container-type: scroll-state;
-}
-.carousel--inert > .carousel__slide > .card {
-  @apply opacity-25;
-  /* Container queries are not yet fully supported in all browsers and the syntax here is invalid.
-     If you want to apply styles when the container is NOT snapped, you can use a class or supported container query syntax.
-     For now, this block is commented out to prevent CSS errors. */
-  /* @container (not scroll-state(snapped)) {
-    interactivity: inert;
-  } */
-}
-/* =========================== */
+/* Section Testimonials | Carusel - END */
 
 
   .marquee-item {
