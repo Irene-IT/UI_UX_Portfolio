@@ -18,17 +18,18 @@
       }
     ],
     "paths": {
-      // "@/*": ["./*"]
       "@/*": ["./src/*"]
     },
 
-    
-
- "baseUrl": ".",
+    "baseUrl": "."
   },
 
-
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/sections/Footer.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/sections/Footer.jsx"
+  ],
   "exclude": ["node_modules"]
 }
-
