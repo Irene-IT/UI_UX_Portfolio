@@ -3,8 +3,8 @@ import TestimonialSlider from "../components/TestimonialSlider";
 const Testimonials = () => {
   return (
     <section id="testimonials" className="flex-center section-padding">
-        <div className="w-full flex flex-col items-center gap-[50px]">
-          <h2 className="text-center">
+        <div className="w-full flex-col-center gap-[50px]">
+          <h2 className="text-center text-pretty">
             Kind words from satisfied clients
           </h2>
           <TestimonialSlider />
