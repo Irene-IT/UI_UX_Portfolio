@@ -25,7 +25,8 @@ const NavBar = () => {
   return (
     // <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
 
-   <header className="navbar baseBorder baseBgBtn">
+   <header className={ "navbar" }>
+
         <nav className="desktop">
           <ul>
             {navLinks.map(({ link, name }) => (
