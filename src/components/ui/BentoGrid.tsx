@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { MarqueeDemoVertical } from "../ui/GridLogoShow";
+import BasicModal from "../../sections/ModalContact";
 
 // import MarqueeVertical from "../MarqueeVertical";
 
@@ -77,7 +78,7 @@ export const BentoGridItem = ({
     <div
       className={cn(
         // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl  group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 baseBorder",
         className
       )}
       style={{
@@ -109,14 +110,14 @@ export const BentoGridItem = ({
               src={spareImg}
               alt={spareImg}
               //   width={220}
-              className="object-cover object-center w-full h-full"
+              className="object-cover object-center size-full"
             />
           )}
         </div>
         {id === 6 && (
           // add background animation , remove the p tag
           // <BackgroundGradientAnimation>
-          <div className="absolute z-50 inset-0 flex items-center justify-center text-[--color-blue-50] font-normal px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+          <div className="absolute inset-0 flex items-center justify-center text-[--color-blue-50] font-normal px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl bg-prod-light bg-prod1"></div>
           // </BackgroundGradientAnimation>
         )}
 
@@ -156,14 +157,14 @@ export const BentoGridItem = ({
               {/* add rounded-md h-8 md:h-8, remove rounded-full */}
               {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
               {/* add handleCopy() for the copy the text */}
-              <div
+              {/* <div
                 className={`absolute -bottom-5 right-0 ${
                   copied ? "block" : "block"
                 }`}
-              >
+              > */}
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
                 {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
-              </div>
+              {/* </div> */}
 
               {/* <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
@@ -173,12 +174,13 @@ export const BentoGridItem = ({
                 otherClasses="!bg-[#161A31]"
               /> */}
 
-              <a
+              {/* <a
                 href="#contact"
                 className="btn flex-center w-45 md:w-50 h-10 mx-auto my-0 text-sm"
               >
                 Discuss Project
-              </a>
+              </a> */}
+              <BasicModal />
             </div>
           )}
         </div>

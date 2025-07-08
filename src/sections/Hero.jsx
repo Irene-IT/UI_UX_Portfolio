@@ -1,6 +1,5 @@
 // import { BackgroundGradientAnimation } from "../components/background-gradient-animation";
-// import Button from "../components/Button";
-
+import BasicModal from "./ModalContact";
 
 const Hero = () => {
   return (
@@ -14,7 +13,7 @@ const Hero = () => {
       >
         {/* <BackgroundGradientAnimation> */}
         <img
-          src="/images/bgColor.png"
+          src="/images/bgColor.webp"
           alt="background"
           className="z-5 size-full object-cover "
         />
@@ -26,7 +25,7 @@ const Hero = () => {
           <div className="hero-text">
             <div className=" w-full flex-center">
               <h1> Transforming</h1>
-              <img src="/images/idea.png" alt="decor" class="h-8 sm:h-10" />
+              <img src="/images/idea.png" alt="decor" className="h-8 sm:h-10" />
               <h1>into</h1>
             </div>
 
@@ -46,13 +45,13 @@ const Hero = () => {
         id="counter"
       /> */}
 
-      {/* <button className="btn flex-center mb-[100px]">
-        Discuss Project
-      </button> */}
-
+{/* 
       <a href="#contact" className="btn flex-center mb-[100px]">
         Discuss Project
-      </a>
+      </a> */}
+      <div className="mb-[100px] z-50"> 
+       <BasicModal />
+      </div>
     </section>
   );
 };

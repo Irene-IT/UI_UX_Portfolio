@@ -42,7 +42,7 @@ const TestimonialSlider = () => {
 
   return (
     <div className="relative w-full max-w-4xl flex justify-center overflow-hidden">
-      <div className="w-4/5 max-w-[900px] h-[400px] flex-col-center justify-between  gap-4">
+      <div className="w-4/5 max-w-[900px] h-auto flex-col-center justify-between  gap-4">
         {/* Slides wrapper with touch events */}
         <div
           className="flex gap-4 lg:gap-10 transition-all duration-500 ease-in-out size-full"
@@ -53,7 +53,7 @@ const TestimonialSlider = () => {
         >
           {testimonials.map((t, index) => (
             <div key={index} className="inset-0 shrink-0 bg-card size-full">
-              <div className="card size-full">
+              <div className="card-gradient size-full">
                 <div className="flex items-center gap-4 mb-4">
                   <img
                     src={t.avatar}

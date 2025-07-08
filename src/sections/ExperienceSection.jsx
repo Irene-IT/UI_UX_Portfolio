@@ -1,4 +1,3 @@
-import TitleHeader from "../components/TitleHeader";
 import { expCards } from "../constants";
 import GlowCard from "../components/GlowCard";
 import gsap from "gsap";
@@ -91,12 +90,15 @@ const ExperienceSection = () => {
 
   return (
     <section id="experience" className="flex-center section-padding">
-      <div className="w-full h-full md:px-20 px-5">
-        <TitleHeader title="My work experience" />
+      <div className="size-full md:px-20 px-4">
+        {/* <TitleHeader title="My work experience" /> */}
+
+        <h2 className="text-center">My work experience</h2>
+
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {expCards.map((card) => (
-              <div key={card.title} className="exp-card-wrapper">
+              <div key={card.id} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
                   <GlowCard card={card}>
                     <div>
@@ -111,7 +113,7 @@ const ExperienceSection = () => {
                       <div className="gradient-line w-1 h-full" />
                     </div>
                     <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
-                      <div className="timeline-logo">
+                      <div className="timeline-logo baseBorder baseBgBtn">
                         <img src={card.logoPath} alt="logo" />
                       </div>
                       <div>
