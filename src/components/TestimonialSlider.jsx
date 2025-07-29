@@ -4,7 +4,7 @@ import { testimonials } from "../constants";
 const SWIPE_THRESHOLD = 50; // Minimum space for swipe
 
 const TestimonialSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
   const [touchStartX, setTouchStartX] = useState(null);
   const [touchEndX, setTouchEndX] = useState(null);
 
@@ -41,8 +41,9 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="relative w-full max-w-4xl flex justify-center overflow-hidden">
-      <div className="w-4/5 max-w-[900px] h-auto flex-col-center justify-between  gap-4">
+    // max-w-4xl
+    <div className="relative w-full flex justify-center overflow-hidden">
+      <div className="w-4/5 max-w-[812px] h-auto flex-col-center justify-between  gap-4">
         {/* Slides wrapper with touch events */}
         <div
           className="flex gap-4 lg:gap-10 transition-all duration-500 ease-in-out size-full"
@@ -52,8 +53,8 @@ const TestimonialSlider = () => {
           onTouchEnd={handleTouchEnd}
         >
           {testimonials.map((t, index) => (
-            <div key={index} className="inset-0 shrink-0 bg-card size-full">
-              <div className="card-gradient size-full">
+            <div key={index} className="inset-0 shrink-0 size-full ">
+              <div className="card-gradient bg-card size-full">
                 <div className="flex items-center gap-4 mb-4">
                   <img
                     src={t.avatar}
@@ -78,12 +79,13 @@ const TestimonialSlider = () => {
         </div>
 
         {/* Arrows */}
-        <div className="flex">
-          <button onClick={handlePrev} className="left-2 btn-arrow">
-            {/* ❮ */}↜
+        <div className="flex gap-4">
+          <button onClick={handlePrev} className="btn-arrow rotate-180">
+               <img src="/images/arrow-stepper.svg" alt="arrow left" className="w-2.5 h-auto"/>
+
           </button>
-          <button onClick={handleNext} className="right-2 btn-arrow">
-            {/* ❯ */}↝
+          <button onClick={handleNext} className="btn-arrow">
+             <img src="/images/arrow-stepper.svg" alt="arrow right" className="w-2.5 h-auto"/>
           </button>
         </div>
       </div>

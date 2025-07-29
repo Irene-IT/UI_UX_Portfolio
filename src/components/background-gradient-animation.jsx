@@ -1,9 +1,10 @@
 "use client";
-import { cn } from "/lib/utils";
+import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradientAnimation = ({
-  gradientBackgroundStart = "rgb(108, 0, 162)",
+  gradientBackgroundStart = "#09122C",
+  // gradientBackgroundStart = "rgb(108, 0, 162)",
   gradientBackgroundEnd = "rgb(0, 17, 82)",
   firstColor = "18, 113, 255",
   secondColor = "221, 74, 255",
@@ -35,7 +36,16 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--pointer-color", pointerColor);
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
-  }, []);
+  }, [ blendingValue,
+  fifthColor,
+  firstColor,
+  fourthColor,
+  gradientBackgroundEnd,
+  gradientBackgroundStart,
+  pointerColor,
+  secondColor,
+  size,
+  thirdColor]);
 
   useEffect(() => {
     function move() {
@@ -48,7 +58,7 @@ export const BackgroundGradientAnimation = ({
     }
 
     move();
-  }, [tgX, tgY]);
+  }, [tgX, tgY, curX, curY]);
 
   const handleMouseMove = (event) => {
     if (interactiveRef.current) {

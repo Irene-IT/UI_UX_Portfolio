@@ -1,9 +1,10 @@
-// import { useState, useEffect } from "react";
-
+import { useState } from "react";
 import { navLinks } from "../constants";
 
+// import useIsOnscreen from "../hooks/ useIsOnscreen";
+
 const NavBar = () => {
-  // track if the user has scrolled down the page
+  //   // track if the user has scrolled down the page
   // const [scrolled, setScrolled] = useState(false);
 
   // useEffect(() => {
@@ -22,32 +23,33 @@ const NavBar = () => {
   //   return () => window.removeEventListener("scroll", handleScroll);
   // }, []);
 
-  return (
-    // <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
+  const [activeLink, setActiveLink] = useState();
 
-   <header className="navbar baseBorder baseBgBtn">
-        <nav className="desktop">
-          <ul>
-            {navLinks.map(({ link, name }) => (
-              <li key={name} className="group">
-                <a href={link}>{name}
-                  {/* <span>{name}</span> */}
-                  {/* <span className="underline" /> */}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+  return (
+    <header className="navbar baseBorder baseBgBtn">
+      <nav className="desktop">
+        <ul>
+          {navLinks.map(({ link, name }) => (
+            <li key={name} className="group">
+              <a
+                href={link}
+                className={activeLink === link ? "active" : ""}
+                onClick={() => setActiveLink(link)}
+              >
+                {name}
+                {activeLink === link && (
+                  <span className="absolute flex size-3 top-[34px] md:top-[38px]">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#AAB2F9] opacity-75"></span>
+                    <span className="absolute inline-flex size-3 rounded-full bg-[#AAB2F9]"></span>
+                  </span>
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
-    
   );
 };
 
 export default NavBar;
-
-
-// addd animate active class to the active link
-// <span class="relative flex size-3">
-//   <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
-//   <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span>
-// </span>

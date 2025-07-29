@@ -11,7 +11,9 @@ const BasicModal = () => {
   return (
     <>
       <button
-        className="w-45 md:w-50 h-10 mx-auto my-0 text-sm flex-center baseBgBtn baseBorder rounded-xl"
+        // className="w-45 md:w-50 h-10 mx-auto my-0 text-sm flex-center baseBgBtn baseBorder rounded-xl"
+
+        className="actionBtn"
         onClick={handleOpen}
       >
         Discuss Project
@@ -31,7 +33,7 @@ const BasicModal = () => {
             borderRadius: "20px",
             maxWidth: "800px",
             width: "90vw",
-            maxHeight: "80vh",
+            maxHeight: "90vh",
             overflowY: "auto",
           }}
         >

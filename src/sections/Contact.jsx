@@ -50,15 +50,14 @@ const Contact = () => {
           title="Get in Touch – Let's Connect"
           sub="💬 Have questions or ideas? Let's talk! 🚀"
         />
-        <div className="grid-12-cols mt-4">
-          <div className="xl:col-span-5">
-            <div className="flex-center baseBorder rounded-xl p-10">
+        <div className="mt-4">
+            <div className="h-[588px] xl:h-[610px] flex items-start baseBorder rounded-xl p-10">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
-                className="w-full flex flex-col gap-4"
+                className="w-full flex flex-col gap-10"
               >
-                <div>
+                <div className="h-20">
                   <label htmlFor="name">Your name</label>
                   <input
                     type="text"
@@ -75,7 +74,7 @@ const Contact = () => {
                   )}
                 </div>
 
-                <div>
+                <div className="h-20">
                   <label htmlFor="email">Your Email</label>
                   <input
                     type="email"
@@ -118,12 +117,12 @@ const Contact = () => {
                   </div>
                 </button>
               </form>
-            </div>
+           
           </div>
           {/* min-h-96 */}
-          <div className="xl:col-span-7">
+          {/* <div className="xl:col-span-7">
             <div className="bg-[#cd7c2e] size-full hover:cursor-grab rounded-3xl overflow-hidden"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

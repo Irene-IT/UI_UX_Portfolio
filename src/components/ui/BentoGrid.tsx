@@ -174,12 +174,7 @@ export const BentoGridItem = ({
                 otherClasses="!bg-[#161A31]"
               /> */}
 
-              {/* <a
-                href="#contact"
-                className="btn flex-center w-45 md:w-50 h-10 mx-auto my-0 text-sm"
-              >
-                Discuss Project
-              </a> */}
+             
               <BasicModal />
             </div>
           )}

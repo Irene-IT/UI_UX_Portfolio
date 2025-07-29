@@ -17,6 +17,26 @@ const navLinks = [
   },
 ];
 
+
+// const navLinks = [
+//   {id: "about",
+//     name: "About",
+//     link: "#about",
+//   },
+//   {id: "projects",
+//     name: "Projects",
+//     link: "#projects",
+//   },
+//   {id: "experience",
+//     name: "Experience",
+//     link: "#experience",
+//   },
+//   {id: "contact",
+//     name: "Contact",
+//     link: "#contact",
+//   },
+// ];
+
 const gridItems = [
   {
     id: 1,
@@ -245,7 +265,7 @@ const expCards = [
   {
     id: 1,
     review: "Dmitry brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
+    imgPath: "/images/exp1.svg",
     logoPath: "/images/logo1.svg",
     title: "UX/UI designer",
     date: "January 2022 - September 2024",
@@ -258,7 +278,7 @@ const expCards = [
   {
     id: 2,
     review: "Dmitry’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
+    imgPath: "/images/exp2.svg",
     logoPath: "/images/logo2.svg",
     title: "UX/UI designer",
     date: "June 2020 - December 2022",
@@ -271,7 +291,7 @@ const expCards = [
   {
     id: 3,
     review: "Dmitry’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
+    imgPath: "/images/exp3.svg",
     logoPath: "/images/logo3.svg",
     title: "Game UI designer",
     date: "March 2014 - May 2022",
@@ -340,22 +360,28 @@ const projects = [
 // Section Testimonials | Carousel 
 const testimonials = [
   {
-    name: "Michael Johnson",
+    name: "Chelsey Dietrich",
     title: "Director of AlphaStream Technologies",
     avatar: "/images/avatar1.png",
-    text: `Collaborating with Dmitry was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Dmitry's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Dmitry is the ideal partner.`,
+    text: `Dmitry quickly grasped the nuances of our B2B SaaS platform and transformed complex workflows into a clean, intuitive interface. What impressed us most was how he worked alongside our developers—speaking their language, anticipating edge cases, and pushing for design consistency without sacrificing functionality. He’s a rare hybrid of creative and practical.`,
   },
   {
     name: "Patricia Lebsack",
-    title: "CEO of WebGuru",
+    title: "Executive Director at BridgeForward",
     avatar: "/images/avatar1.png",
-    text: `Collaborating with Dmitry was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Dmitry's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Dmitry is the ideal partner.`,
+    text: `Our organization supports people with varying levels of digital literacy, and Dmitry understood that from day one. He approached our redesign with compassion, curiosity, and deep user empathy. The new experience is beautiful, but more importantly—it’s accessible and welcoming. He made something complex feel effortless.`,
   },
   {
-    name: "Chelsey Dietrich",
-    title: "CRM Integration Specialist of A-Team Global",
+    name: "Ian Hefeldinger",
+    title: "Founder of A-Team Global",
     avatar: "/images/avatar1.png",
-    text: `What sets Dmitry apart is not just technical skill. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Dmitry's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Dmitry is the ideal partner.`,
+    text: `Dmitry didn’t just redesign our store—he redefined how customers experience our brand. He nailed the vibe, smoothed out the purchase flow, and introduced thoughtful touches that actually boosted conversion. I’ve worked with designers who make things pretty. Dmitry makes things work and sell.`,
+  },
+  {
+    name: "Adrian Hernandez",
+    title: "Product Manager at StratifyHQ",
+    avatar: "/images/avatar1.png",
+    text: `Whether it was a mobile app, marketing site, or experimental concept—we threw everything at Dmitry, and he delivered every time. He moves fast, asks the right questions, and always brings options to the table. He’s not just reliable—he’s one of the few designers we actually look forward to collaborating with.`,
   },
 ];
 
@@ -392,15 +418,15 @@ const approachCards = [
 const socialMedia = [
   {id:1,
     name: "insta",
-    imgPath: "/images/insta.png",
+    imgPath: "/images/insta.svg",
   },
   {id:2,
     name: "twit",
-    imgPath: "/images/twit.png",
+    imgPath: "/images/twit.svg",
   },
   {id:3,
     name: "linkedin",
-    imgPath: "/images/linkedin.png",
+    imgPath: "/images/linkedin.svg",
   },
 ];
 
