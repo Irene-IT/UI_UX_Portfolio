@@ -1,53 +1,57 @@
 @font-face {
-    font-family: 'Poppins';
-    src: url('fonts/Poppins-SemiBold.woff2') format('woff2'),
-        url('fonts/Poppins-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Poppins";
+  src:
+    url("fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('fonts/Poppins-Regular.woff2') format('woff2'),
-        url('fonts/Poppins-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Poppins";
+  src:
+    url("fonts/Poppins-Regular.woff2") format("woff2"),
+    url("fonts/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('fonts/Poppins-Light.woff2') format('woff2'),
-        url('fonts/Poppins-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Poppins";
+  src:
+    url("fonts/Poppins-Light.woff2") format("woff2"),
+    url("fonts/Poppins-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('fonts/Poppins-Bold.woff2') format('woff2'),
-        url('fonts/Poppins-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Poppins";
+  src:
+    url("fonts/Poppins-Bold.woff2") format("woff2"),
+    url("fonts/Poppins-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('fonts/Poppins-Medium.woff2') format('woff2'),
-        url('fonts/Poppins-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Poppins";
+  src:
+    url("fonts/Poppins-Medium.woff2") format("woff2"),
+    url("fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @tailwind utilities;
-
 
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
@@ -58,6 +62,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   display: flex;
+  box-sizing: border-box;
   background-color: var(--color-black);
   color: var(--color-blue-50);
   scroll-behavior: smooth;
@@ -76,8 +81,6 @@ span {
   font-family: "Poppins";
 }
 
-
-
 @theme {
   --font-sans: "Poppins", sans-serif;
   --color-white-50: #d9ecff;
@@ -85,11 +88,11 @@ span {
   --color-black-50: #1c1c21;
   --color-black-100: #0e0e10;
   --color-black-200: #282732;
-  --color-blue-50: #D2E2F5;
+  --color-blue-50: #d2e2f5;
   --color-blue-100: #2d2d38;
-  --color-midnightBlue: #1F2243;
-  --color-gold-50: #D5892C;
-  --color-slateBlue: #6971A2; 
+  --color-midnightBlue: #1f2243;
+  --color-gold-50: #d5892c;
+  --color-slateBlue: #6971a2;
 }
 
 /* section hero bg-animated gradient - START */
@@ -146,18 +149,19 @@ span {
 
 /* section hero bg-animated gradient - END */
 
-
 @layer base {
- h1 {
-  @apply font-medium z-20;
-  font-size: min(6vw, 60px);
-}
-
-  h2 {
-    @apply font-semibold text-3xl md:text-5xl;
+  h1 {
+    @apply font-medium z-20;
+    font-size: min(6vw, 60px);
   }
 
- h3 {@apply font-medium md:text-[32px] text-3xl}
+  h2 {
+    @apply font-semibold text-3xl md:text-5xl text-center text-pretty;
+  }
+
+  h3 {
+    @apply font-medium md:text-[32px] text-3xl;
+  }
 
   p {
     @apply text-base lg:text-xl font-light text-blue-50;
@@ -178,7 +182,7 @@ span {
   }
 
   .section-padding {
-    @apply px-5 md:px-10 xl:px-0 md:mt-35 mt-25;
+    @apply px-5 md:px-10 xl:px-0 pt-25 md:pt-35;
   }
 
   .mt-responsive {
@@ -194,7 +198,7 @@ span {
   }
 
   .baseBorder {
-   @apply border border-solid border-slateBlue/[0.3]
+    @apply border border-solid border-slateBlue/[0.3]
    bg-linear-[103.4deg,#04071D_16.66%,#0C0E23_81.61%];
   }
 
@@ -205,11 +209,9 @@ span {
   .actionBtn {
     @apply md:w-47.5 md:h-15 w-41.5 h-12 text-white rounded-full font-medium text-sm md:text-base whitespace-nowrap cursor-pointer bg-linear-[96.68deg,#3344F6_5.98%,#4A2486_87.41%];
   }
-
 }
 
 @layer components {
-
   /* General Grids */
   /* .grid-base {
     @apply grid grid-cols-1;
@@ -235,6 +237,7 @@ span {
     @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
   } */
 
+  /* section Hero - START */
   .hero-layout {
     @apply relative w-full h-[75%] flex items-center justify-center;
   }
@@ -243,20 +246,22 @@ span {
     @apply flex flex-col justify-center text-wrap md:text-pretty font-semibold relative w-[90%] md:w-[66%];
   }
 
-
   span.colorUser {
     @apply inline font-semibold text-[100%] leading-[100%] bg-clip-text;
-    background: radial-gradient(62.35% 83.7% at 57.87% 79.73%,
-        #ff5cdd 0%,
-        #507cff 100%);
+    background: radial-gradient(
+      62.35% 83.7% at 57.87% 79.73%,
+      #ff5cdd 0%,
+      #507cff 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-/* section NavBar - START */
+  /* section Hero - END */
+
+  /* section NavBar - START */
   .navbar {
-    @apply fixed w-[90vw] md:w-[60vw] xl:w-[30vw] left-1/2 -translate-x-1/2 top-4 md:top-[50px] z-60 inset-x-auto p-5 rounded-xl;
-   
+    @apply fixed w-[90vw] md:w-[60vw] xl:w-[30vw] left-1/2 -translate-x-1/2 top-4 md:top-8 z-60 inset-x-auto p-5 rounded-xl;
 
     nav.desktop {
       @apply relative  w-auto flex items-center justify-center flex-row;
@@ -266,17 +271,15 @@ span {
 
         li.group a {
           @apply relative block text-blue-50 text-sm md:text-base font-light transition duration-300 ease-in-out transform;
-
         }
         li a.active {
-          @apply flex items-center gap-3 justify-center flex-col font-semibold
+          @apply flex items-center gap-3 justify-center flex-col font-semibold;
         }
       }
     }
   }
 
   /* section NavBar - END */
-
 
   .app-showcase {
     @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
@@ -318,12 +321,9 @@ span {
     }
   }
 
-  .cta-wrapper {
+  /* .cta-wrapper {
     @apply relative z-20 cursor-pointer;
-  }
-  
-
- 
+  } */
 
   /* Section Progects - START */
   .bg-prod-light {
@@ -331,34 +331,42 @@ span {
   }
 
   .bg-prod-dark {
-    background: linear-gradient(103.4deg, #04071D 16.66%, #0C0E23 81.61%);
+    background: linear-gradient(103.4deg, #04071d 16.66%, #0c0e23 81.61%);
   }
 
   .bg-prod1 {
     background:
-      radial-gradient(65% 109% at 2.5% 0%,
+      radial-gradient(
+        65% 109% at 2.5% 0%,
         #0b4256 0%,
-        rgba(11, 66, 86, 0) 100%),
-      radial-gradient(58% 98% at 100% 0%,
+        rgba(11, 66, 86, 0) 100%
+      ),
+      radial-gradient(
+        58% 98% at 100% 0%,
         #351076 0%,
-        rgba(53, 16, 118, 0) 100%),
-      radial-gradient(81% 135% at 81.5% 100%,
+        rgba(53, 16, 118, 0) 100%
+      ),
+      radial-gradient(
+        81% 135% at 81.5% 100%,
         #122568 0%,
-        rgba(18, 37, 104, 0) 100%),
+        rgba(18, 37, 104, 0) 100%
+      ),
       #13162d;
   }
 
   .bg-prod2 {
     background:
-      radial-gradient(70% 117% at 74% 100%,
+      radial-gradient(
+        70% 117% at 74% 100%,
         #0b4256 0%,
-        rgba(11, 66, 86, 0) 100%),
-      radial-gradient(56% 95% at 61% 0%,
-        #351076 0%,
-        rgba(53, 16, 118, 0) 100%),
-      radial-gradient(63% 105% at 0% 100%,
+        rgba(11, 66, 86, 0) 100%
+      ),
+      radial-gradient(56% 95% at 61% 0%, #351076 0%, rgba(53, 16, 118, 0) 100%),
+      radial-gradient(
+        63% 105% at 0% 100%,
         #122568 0%,
-        rgba(18, 37, 104, 0) 100%),
+        rgba(18, 37, 104, 0) 100%
+      ),
       #13162d;
   }
 
@@ -366,7 +374,6 @@ span {
     @apply relative size-full transition duration-700 ease-in-out mx-[-33px] object-cover;
   }
   /* Section Progects - END */
-
 
   /* Section Testimonials | Carusel - START */
   .bg-card {
@@ -395,8 +402,6 @@ span {
   }
   /* Section Testimonials | Carusel - END */
 
-
-
   /* ExperienceSection - START */
   .glow {
     @apply pointer-events-none absolute size-full -translate-x-2/4 -translate-y-2/4 blur-[10px] saturate-[200] left-2/4 top-2/4;
@@ -411,7 +416,7 @@ span {
     /* @apply h-full flex xl:justify-center; 
     xl:left-[35.5vw] md:left-10 left-0
     */
-   @apply absolute top-0 xl:left-[47vw] left-10 h-full flex justify-center;
+    @apply absolute top-0 xl:left-[47vw] left-10 h-full flex justify-center;
   }
 
   .timeline {
@@ -421,11 +426,13 @@ span {
 
   .gradient-line {
     @apply absolute w-1 h-full top-10;
-    background: linear-gradient(0deg,
-        rgba(52, 206, 180, 0) 0%,
-        #658a3b 31.89%,
-        #e6bd37 62.83%,
-        #4b4d50 97.33%);
+    background: linear-gradient(
+      0deg,
+      rgba(52, 206, 180, 0) 0%,
+      #658a3b 31.89%,
+      #e6bd37 62.83%,
+      #4b4d50 97.33%
+    );
   }
 
   .timeline-logo {
@@ -435,14 +442,11 @@ span {
   }
   /* ExperienceSection - END */
 
-
-
-
-/* Approach - START */
-.approach-text{
-  @apply text-center opacity-100 relative transition duration-200 ease-in-out transform -translate-y-2
-}
-/* Approach - END */
+  /* Approach - START */
+  .approach-text {
+    @apply text-center opacity-100 relative transition duration-200 ease-in-out transform -translate-y-2;
+  }
+  /* Approach - END */
 
   .gradient-edge {
     @apply w-36 h-full absolute bottom-0 z-20;
@@ -477,17 +481,28 @@ span {
 
     input,
     textarea {
-      @apply w-full px-4 py-4 md:text-base text-sm placeholder:text-blue-50 bg-blue-100 rounded-md;
+      @apply w-full p-4 md:text-base text-sm rounded-md 
+      border border-solid border-gold-50 bg-blue-100 focus:outline-none focus:border-blue-50/50;
     }
 
-    a {
+    input:valid,
+    textarea:valid,
+    input:valid:-webkit-autofill {
+      @apply shadow-[inset_0_60px_bg-blue-100] rounded-md 
+  border-slateBlue/[0.9];
+      -webkit-box-shadow: 0 60px var(--color-blue-100) inset;
+      -webkit-text-fill-color: var(--color-white-50);
+    }
+
+    /* a {
       @apply w-full py-4 bg-white text-black font-semibold rounded-md flex justify-center items-center gap-2;
 
       img {
         @apply inline-block;
       }
-    }
+    } */
   }
+ /* Footer - END */
 
   /* Contact / MODAL - START */
 
@@ -510,8 +525,7 @@ span {
       }
     }
   }
-/* Contact / MODAL - END */
-
+  /* Contact / MODAL - END */
 
   /* END COMPONENTS */
 }
@@ -564,43 +578,45 @@ span {
 } */
 /* Hero Text slider ends */
 
-
-
-
 /* LogoShowcase start */
-.gradient-edge:nth-of-type(1) {
+/* .gradient-edge:nth-of-type(1) {
   left: 0;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(90deg,
-      rgba(0, 3, 25, 1) 0%,
-      rgba(0, 3, 25, 0) 100%);
+  background: #000000;
+  background: linear-gradient(
+    90deg,
+    #000319 0%,
+    rgba(0, 3, 25, 0) 100%
+  );
 }
 
 .gradient-edge:nth-of-type(2) {
   right: 0;
-  background: linear-gradient(-90deg,
-      rgba(0, 3, 25, 1) 0%,
-      rgba(0, 3, 25, 0) 100%);
-}
+  background: linear-gradient(
+    -90deg,
+    #000319 0%,
+    #00031900 100%
+  );
+} */
 
 /* marquee */
-.marquee {
+/* .marquee {
   width: 100dvw;
   overflow: hidden;
   position: relative;
-}
+} */
 
-.marquee-box {
+/* .marquee-box {
   display: flex;
   align-items: center;
   width: 200%;
   height: 100%;
   position: absolute;
-  overflow: hidden;
-  animation: marquee 60s linear infinite;
-}
+  overflow: hidden; */
+  /* animation: marquee 40s linear infinite; */
+  /* animation: 10s linear infinite marquee;
+} */
 
-.marquee-item {
+/* .marquee-item {
   float: left;
 }
 
@@ -612,10 +628,9 @@ span {
   100% {
     left: -100%;
   }
-}
+} */
 
-
-@theme inline {
+/* @theme inline {
   --animate-marquee-vertical: marquee-vertical 40s linear infinite;
 
   @keyframes marquee-vertical {
@@ -627,11 +642,35 @@ span {
       transform: translateY(calc(-100% - var(--gap)));
     }
   }
+} */
+
+
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+ 
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
+
+
 
 /* marquee end */
 /* LogoShowcase end  */
-
 
 /* ExperienceSection / GlowCard - Start */
 .card {
@@ -654,11 +693,14 @@ span {
   border: 2px solid transparent;
   background: var(--gradient);
   background-attachment: fixed;
-  mask: linear-gradient(#0000, #0000),
-    conic-gradient(from calc((var(--start) - 15) * 1deg),
+  mask:
+    linear-gradient(#0000, #0000),
+    conic-gradient(
+      from calc((var(--start) - 15) * 1deg),
       #ffffff1f 0deg,
       white,
-      #ffffff00 100deg);
+      #ffffff00 100deg
+    );
   mask-composite: intersect;
   mask-clip: padding-box, border-box;
   opacity: 0;

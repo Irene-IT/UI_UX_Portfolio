@@ -1,41 +1,21 @@
 const navLinks = [
-  {
+  {id: "about",
     name: "About",
     link: "#about",
   },
-  {
+  {id: "projects",
     name: "Projects",
     link: "#projects",
   },
-  {
+  {id: "experience",
     name: "Experience",
     link: "#experience",
   },
-  {
+  {id: "contact",
     name: "Contact",
     link: "#contact",
   },
 ];
-
-
-// const navLinks = [
-//   {id: "about",
-//     name: "About",
-//     link: "#about",
-//   },
-//   {id: "projects",
-//     name: "Projects",
-//     link: "#projects",
-//   },
-//   {id: "experience",
-//     name: "Experience",
-//     link: "#experience",
-//   },
-//   {id: "contact",
-//     name: "Contact",
-//     link: "#contact",
-//   },
-// ];
 
 const gridItems = [
   {
@@ -150,60 +130,43 @@ const gridItems = [
 //   ];
 
 
-const logoIconsList = [
-  {
-    imgPath: "/images/logos/company-logo-1.png",
-    name: "Logo Adobe",
-  },
-  {
-    imgPath: "/images/logos/company-logo-2.png",
-    name: "Logo Shopify",
-  },
-  {
-    imgPath: "/images/logos/company-logo-3.png",
-    name: "Logo Blender",
-  },
-  {
-    imgPath: "/images/logos/company-logo-4.png",
-    name: "Logo Microsoft",
-  },
-  // COPY 2's!!! This is important for if not enough logos to fill the screen, the animation will not break.
-  {
-    imgPath: "/images/logos/company-logo-1.png",
-    name: "Logo Adobe",
-  },
-  {
-    imgPath: "/images/logos/company-logo-2.png",
-    name: "Logo Shopify",
-  },
-  {
-    imgPath: "/images/logos/company-logo-3.png",
-    name: "Logo Blender",
-  },
-  {
-    imgPath: "/images/logos/company-logo-4.png",
-    name: "Logo Microsoft",
-  },
+// const logoIconsList = [
+//   {
+//     imgPath: "/images/logos/company-logo-1.png",
+//     name: "Logo Adobe",
+//   },
+//   {
+//     imgPath: "/images/logos/company-logo-2.png",
+//     name: "Logo Shopify",
+//   },
+//   {
+//     imgPath: "/images/logos/company-logo-3.png",
+//     name: "Logo Blender",
+//   },
+//   {
+//     imgPath: "/images/logos/company-logo-4.png",
+//     name: "Logo Microsoft",
+//   },
+//   // COPY 2's!!! This is important for if not enough logos to fill the screen, the animation will not break.
+// ];
 
-];
-
-const abilities = [
-  {
-    imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
-  },
-  {
-    imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
-  },
-  {
-    imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
-  },
-];
+// const abilities = [
+//   {
+//     imgPath: "/images/seo.png",
+//     title: "Quality Focus",
+//     desc: "Delivering high-quality results while maintaining attention to every detail.",
+//   },
+//   {
+//     imgPath: "/images/chat.png",
+//     title: "Reliable Communication",
+//     desc: "Keeping you updated at every step to ensure transparency and clarity.",
+//   },
+//   {
+//     imgPath: "/images/time.png",
+//     title: "On-Time Delivery",
+//     desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+//   },
+// ];
 
 const techStackImgs = [
   {
@@ -359,25 +322,25 @@ const projects = [
 
 // Section Testimonials | Carousel 
 const testimonials = [
-  {
+  {id:1,
     name: "Chelsey Dietrich",
     title: "Director of AlphaStream Technologies",
     avatar: "/images/avatar1.png",
     text: `Dmitry quickly grasped the nuances of our B2B SaaS platform and transformed complex workflows into a clean, intuitive interface. What impressed us most was how he worked alongside our developers—speaking their language, anticipating edge cases, and pushing for design consistency without sacrificing functionality. He’s a rare hybrid of creative and practical.`,
   },
-  {
+  {id:2,
     name: "Patricia Lebsack",
     title: "Executive Director at BridgeForward",
     avatar: "/images/avatar1.png",
     text: `Our organization supports people with varying levels of digital literacy, and Dmitry understood that from day one. He approached our redesign with compassion, curiosity, and deep user empathy. The new experience is beautiful, but more importantly—it’s accessible and welcoming. He made something complex feel effortless.`,
   },
-  {
+  {id:3,
     name: "Ian Hefeldinger",
     title: "Founder of A-Team Global",
     avatar: "/images/avatar1.png",
     text: `Dmitry didn’t just redesign our store—he redefined how customers experience our brand. He nailed the vibe, smoothed out the purchase flow, and introduced thoughtful touches that actually boosted conversion. I’ve worked with designers who make things pretty. Dmitry makes things work and sell.`,
   },
-  {
+  {id:4,
     name: "Adrian Hernandez",
     title: "Product Manager at StratifyHQ",
     avatar: "/images/avatar1.png",
@@ -432,8 +395,8 @@ const socialMedia = [
 
 export {
   // words,
-  abilities,
-  logoIconsList,
+  // abilities,
+  // logoIconsList,
   // counterItems,
   approachCards,
   expCards,
