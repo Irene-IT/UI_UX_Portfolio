@@ -10,10 +10,7 @@ const ContactModal = () => {
 
   return (
     <>
-      <button
-        className="actionBtn"
-        onClick={handleOpen}
-      >
+      <button className="actionBtn" onClick={handleOpen}>
         Discuss Project
       </button>
       <Modal
@@ -32,13 +29,13 @@ const ContactModal = () => {
             maxWidth: "600px",
             width: "90vw",
             maxHeight: "90vh",
-            overflowY: "auto",
+            overflowY: "auto", 
           }}
         >
-          <ContactForm />
+          <ContactForm onClose={handleClose} />
         </Box>
       </Modal>
     </>
   );
-}
+};
 export default ContactModal;

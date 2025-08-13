@@ -1,4 +1,4 @@
-import { gridItems } from "../../constants";
+import { gridItems } from "@/constants";
 import { BentoGrid, BentoGridItem } from "./BentoGrid";
 
 const About = () => {

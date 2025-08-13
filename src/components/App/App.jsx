@@ -1,6 +1,5 @@
 // This is the root component in the React application.
-
-import { ActiveSectionProvider } from "../../hooks/ActiveSectionContext";
+import { ActiveSectionProvider } from "@/hooks/ActiveSectionContext";
 
 import NavBar from "../NavBar";
 import Hero from "../Hero";

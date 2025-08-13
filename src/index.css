@@ -95,14 +95,35 @@ span {
   --color-slateBlue: #6971a2;
 }
 
-/* section hero bg-animated gradient - START */
-
 @theme inline {
+  /* HeroBgGradientAnimated - START */
   --animate-first: moveVertical 30s ease infinite;
   --animate-second: moveInCircle 20s reverse infinite;
   --animate-third: moveInCircle 40s linear infinite;
   --animate-fourth: moveHorizontal 40s ease infinite;
   --animate-fifth: moveInCircle 20s ease infinite;
+
+  /* LogoMarquee - START */
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+  /* LogoMarquee - END */
 
   @keyframes moveHorizontal {
     0% {
@@ -145,9 +166,8 @@ span {
       transform: translateY(-50%);
     }
   }
+  /* HeroBgGradientAnimated - END */
 }
-
-/* section hero bg-animated gradient - END */
 
 @layer base {
   h1 {
@@ -156,20 +176,19 @@ span {
   }
 
   h2 {
-    @apply font-semibold text-3xl md:text-5xl text-center text-pretty;
+    @apply font-semibold text-3xl md:text-5xl text-center text-pretty leading-[120%];
   }
 
-  h3 {
+  /* h3 {
     @apply font-medium md:text-[32px] text-3xl;
+  } */
+  h3 {
+    @apply text-xl md:text-[32px] font-bold md:font-medium;
   }
 
   p {
     @apply text-base lg:text-xl font-light text-blue-50;
   }
-
-  /* img {
-    @apply max-w-full h-auto object-cover;
-  } */
 }
 
 @layer utilities {
@@ -212,31 +231,6 @@ span {
 }
 
 @layer components {
-  /* General Grids */
-  /* .grid-base {
-    @apply grid grid-cols-1;
-  }
-
-  .grid-2-cols {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
-  }
-
-  .grid-3-cols {
-    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
-  }
-
-  .grid-3-cols-md-tight {
-    @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0;
-  }
-
-  .grid-4-cols {
-    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7;
-  }
-
-  .grid-12-cols {
-    @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
-  } */
-
   /* section Hero - START */
   .hero-layout {
     @apply relative w-full h-[75%] flex items-center justify-center;
@@ -270,7 +264,7 @@ span {
         @apply w-full text-center flex justify-around items-center whitespace-pre-wrap;
 
         li.group a {
-          @apply relative block text-blue-50 text-sm md:text-base font-light transition duration-300 ease-in-out transform;
+          @apply relative text-blue-50 text-sm md:text-base font-light transition duration-300 ease-in-out transform;
         }
         li a.active {
           @apply flex items-center gap-3 justify-center flex-col font-semibold;
@@ -321,11 +315,7 @@ span {
     }
   }
 
-  /* .cta-wrapper {
-    @apply relative z-20 cursor-pointer;
-  } */
-
-  /* Section Progects - START */
+  /* RecentProgects - START */
   .bg-prod-light {
     @apply relative size-full bg-no-repeat bg-cover bg-center;
   }
@@ -373,32 +363,22 @@ span {
   .mobile-frame {
     @apply relative size-full transition duration-700 ease-in-out mx-[-33px] object-cover;
   }
-  /* Section Progects - END */
+  /* RecentProgects - END */
 
   /* Section Testimonials | Carusel - START */
   .bg-card {
-    /* rounded-[1.2rem] */
-    @apply shadow-[0px_1rem_1.5rem_-0.9rem_#000000e1] p-px rounded-3xl w-3/4 md:w-2/4
-
-     border border-solid border-slateBlue/[0.3]
-   bg-linear-[103.4deg,#04071D_16.66%,#0C0E23_81.61%];
-
-    /* background: linear-gradient(135deg, #fffffff5, #3a4b8a, #ffffff98); */
+    @apply shadow-[0px_1rem_1.5rem_-0.9rem_#000000e1] p-px rounded-3xl w-3/4 md:w-2/4 border border-solid border-slateBlue/[0.3] bg-linear-[103.4deg,#04071D_16.66%,#0C0E23_81.61%];
   }
 
   .card-gradient {
-    /* rounded-[1.2rem] */
     @apply p-6 rounded-3xl
     bg-linear-[-90deg,#161A31_3.4%,#06091F_100%];
-
-    /* background: linear-gradient(135deg, #0d1120 0%, #3a4b8a 43%, #0d1120 100%); */
   }
 
   .btn-arrow {
     @apply size-10.5 rounded-full bg-[#1F2243]  active:bg-[#253563] hover:bg-[#253563]/80
     
     hidden md:flex justify-center items-center;
-    /* active:bg-[#253563] */
   }
   /* Section Testimonials | Carusel - END */
 
@@ -409,19 +389,14 @@ span {
 
   .exp-card-wrapper {
     @apply flex flex-col-reverse xl:flex-row justify-between items-end xl:items-start;
-    /* xl:gap-20 gap-10  xl:gap-5 gap-2.5 */
   }
 
   .timeline-wrapper {
-    /* @apply h-full flex xl:justify-center; 
-    xl:left-[35.5vw] md:left-10 left-0
-    */
     @apply absolute top-0 xl:left-[47vw] left-10 h-full flex justify-center;
   }
 
   .timeline {
     @apply absolute z-30 h-[105%] -top-8 w-21  bg-black;
-    /* w-14 md:w-28 z-30 h-[110%] -top-10*/
   }
 
   .gradient-line {
@@ -437,8 +412,6 @@ span {
 
   .timeline-logo {
     @apply size-20 flex-none rounded-full flex justify-center items-center xl:translate-x-10.5;
-    /* md:-translate-y-47 md:-translate-x-20 */
-    /*  md:-translate-y-7 md:size-20*/
   }
   /* ExperienceSection - END */
 
@@ -473,7 +446,6 @@ span {
   }
 
   /* Footer - START */
-
   form {
     label {
       @apply block text-white-50 mb-2;
@@ -493,28 +465,19 @@ span {
       -webkit-box-shadow: 0 60px var(--color-blue-100) inset;
       -webkit-text-fill-color: var(--color-white-50);
     }
-
-    /* a {
-      @apply w-full py-4 bg-white text-black font-semibold rounded-md flex justify-center items-center gap-2;
-
-      img {
-        @apply inline-block;
-      }
-    } */
   }
- /* Footer - END */
+  /* Footer - END */
 
   /* Contact / MODAL - START */
-
   .cta-button {
-    @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+    @apply p-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 size-[120%] group-hover:size-10 group-hover:right-10 rounded-full bg-white-50 transition-all duration-500;
     }
 
     .text {
-      @apply uppercase md:text-lg text-black transition-all duration-500 group-hover:text-blue-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
+      @apply uppercase text-lg text-black transition-all duration-500 group-hover:text-blue-50 group-hover:-translate-x-6 translate-x-0;
     }
 
     .arrow-wrapper {
@@ -526,151 +489,8 @@ span {
     }
   }
   /* Contact / MODAL - END */
-
-  /* END COMPONENTS */
 }
-
-/* Hero text slider starts */
-/* .slide {
-  display: inline-block;
-  flex-direction: column;
-  transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
-}
-
-@keyframes wordSlider {
-  0% {
-    transform: translateY(0.5%);
-  }
-
-  12.5% {
-    transform: translateY(-12.5%);
-  }
-
-  25% {
-    transform: translateY(-25%);
-  }
-
-  37.5% {
-    transform: translateY(-37.5%);
-  }
-
-  50% {
-    transform: translateY(-50%);
-  }
-
-  62.5% {
-    transform: translateY(-62.5%);
-  }
-
-  75% {
-    transform: translateY(-75%);
-  }
-
-  87.5% {
-    transform: translateY(-87.5%);
-  }
-} */
-/* Hero Text slider ends */
-
-/* LogoShowcase start */
-/* .gradient-edge:nth-of-type(1) {
-  left: 0;
-  background: #000000;
-  background: linear-gradient(
-    90deg,
-    #000319 0%,
-    rgba(0, 3, 25, 0) 100%
-  );
-}
-
-.gradient-edge:nth-of-type(2) {
-  right: 0;
-  background: linear-gradient(
-    -90deg,
-    #000319 0%,
-    #00031900 100%
-  );
-} */
-
-/* marquee */
-/* .marquee {
-  width: 100dvw;
-  overflow: hidden;
-  position: relative;
-} */
-
-/* .marquee-box {
-  display: flex;
-  align-items: center;
-  width: 200%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden; */
-  /* animation: marquee 40s linear infinite; */
-  /* animation: 10s linear infinite marquee;
-} */
-
-/* .marquee-item {
-  float: left;
-}
-
-@keyframes marquee {
-  0% {
-    left: 0;
-  }
-
-  100% {
-    left: -100%;
-  }
-} */
-
-/* @theme inline {
-  --animate-marquee-vertical: marquee-vertical 40s linear infinite;
-
-  @keyframes marquee-vertical {
-    from {
-      transform: translateY(0);
-    }
-
-    to {
-      transform: translateY(calc(-100% - var(--gap)));
-    }
-  }
-} */
-
-
-@theme inline {
-  --animate-marquee: marquee var(--duration) infinite linear;
-  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
- 
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-100% - var(--gap)));
-    }
-  }
-  @keyframes marquee-vertical {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(calc(-100% - var(--gap)));
-    }
-  }
-}
-
-
-
-/* marquee end */
-/* LogoShowcase end  */
+/* END COMPONENTS */
 
 /* ExperienceSection / GlowCard - Start */
 .card {
@@ -709,5 +529,37 @@ span {
 
 .card:hover::before {
   opacity: 1;
+}
+
+.star {
+  width: 20px;
+  height: 18px;
+  aspect-ratio: 1.111;
+  clip-path: shape(
+    from 45.35% 3.24%,
+    curve to 54.65% 3.24% with 47.07% -1.08%/52.93% -1.08%,
+    line to 64.79% 28.75%,
+    curve to 69.03% 31.98% with 65.51% 30.58%/67.15% 31.82%,
+    line to 95.36% 34.19%,
+    curve to 98.23% 43.43% with 99.82% 34.56%/101.63% 40.38%,
+    line to 78.17% 61.4%,
+    curve to 76.55% 66.62% with 76.74% 62.69%/76.12% 64.7%,
+    line to 82.68% 93.5%,
+    curve to 75.17% 99.21% with 83.72% 98.05%/78.98% 101.65%,
+    line to 52.62% 84.81%,
+    curve to 47.38% 84.81% with 51.01% 83.78%/48.99% 83.78%,
+    line to 24.84% 99.21%,
+    curve to 17.32% 93.5% with 21.02% 101.65%/16.28% 98.05%,
+    line to 23.45% 66.62%,
+    curve to 21.83% 61.4% with 23.89% 64.7%/23.26% 62.69%,
+    line to 1.77% 43.43%,
+    curve to 4.64% 34.19% with -1.63% 40.38%/0.18% 34.56%,
+    line to 30.97% 31.98%,
+    curve to 35.21% 28.75% with 32.85% 31.82%/34.49% 30.58%,
+    line to 45.35% 3.24%,
+    close
+  );
+  background: linear-gradient(180deg, #ffb300 0%, #ff8400 100%);
+  box-shadow: 0px 4px 13px rgba(255, 225, 0, 0.32);
 }
 /* ExperienceSection / GlowCard - END */

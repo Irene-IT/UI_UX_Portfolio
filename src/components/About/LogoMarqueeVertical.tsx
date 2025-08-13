@@ -9,7 +9,7 @@ const ReviewCard = ({ img, name }: { img: string; name: string }) => {
   return (
     <figure
       className={cn(
-        "relative h-13.5 w-25 lg:h-17.5 lg:w-35  p-4 overflow-hidden rounded-lg  bg-[#10132E] flex-center gap-2"
+        "relative w-25 lg:w-35 h-13.5 lg:h-17.5 p-4 overflow-hidden rounded-lg  bg-[#10132E] flex-center gap-2"
       )}
     >
       <img width="20px" height="20px" alt={name} src={img} />

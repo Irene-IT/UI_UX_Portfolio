@@ -1,4 +1,4 @@
-import { expCards } from "../../constants";
+import { expCards } from "@/constants";
 import GlowCard from "./GlowCard";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -91,67 +91,52 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="flex-center section-padding">
       <div className="size-full md:px-20">
-        {/* <TitleHeader title="Work experience" /> */}
-
         <h2>Work experience</h2>
-
-        {/* <div className="mt-32 relative"> */}
-          <div className="relative mt-12.5 xl:mt-15 w-full z-50 xl:space-y-24 space-y-15">
-            {/* xl:space-y-32 space-y-10 */}
-            {expCards.map((card) => (
-              <div key={card.id} className="exp-card-wrapper">
-                <div className="xl:w-[58%]">
-                  <GlowCard card={card}>
-                    <div>
-                      <img src={card.imgPath} alt="exp-img" />
+        <div className="relative mt-12.5 xl:mt-15 w-full z-50 xl:space-y-24 space-y-15">
+          {expCards.map((card) => (
+            <div key={card.id} className="exp-card-wrapper">
+              <div className="xl:w-[58%]">
+                <GlowCard card={card}>
+                  <div>
+                    <img src={card.imgPath} alt="exp-img" />
+                  </div>
+                </GlowCard>
+              </div>
+              <div className="xl:w-4/6">
+                <div className="flex items-start">
+                  <div className="timeline-wrapper">
+                    <div className="timeline" />
+                    <div className="gradient-line" />
+                  </div>
+                  <div className="relative expText flex gap-5 md:gap-10 xl:gap-20 z-20">
+                    <div className="timeline-logo baseBorder baseBgBtn z-20">
+                      <img
+                        className="size-12.5"
+                        src={card.logoPath}
+                        alt="logo"
+                      />
                     </div>
-                  </GlowCard>
-                </div>
 
-                {/* timeline - start */}
-                {/* <div className="timeline-wrapper">
-                  <div className="timeline" />
-                  <div className="gradient-line" />
-                  <div className="timeline-logo baseBorder baseBgBtn z-20">
-                    <img className="size-12.5" src={card.logoPath} alt="logo" />
-                  </div>
-                </div> */}
-                {/* timeline - end */}
-
-                
-                {/* <div className="expText flex justify-end xl:items-end w-full"> */}
-                <div className="xl:w-4/6">
-                 <div className="flex items-start">
-                    <div className="timeline-wrapper">
-                      <div className="timeline" />
-                      <div className="gradient-line" />
+                    <div className="w-[80%] xl:w-[85%] mb-7.5 xl:mb-0">
+                      <h3>{card.title}</h3>
+                      <p className="mt-2 md:mt-3.5 mb-6 text-gold-50 flex items-center gap-2">
+                        <Icon icon="akar-icons:calendar" />
+                        {card.date}
+                      </p>
+                      <p className="text-[#5a9bea] ">Responsibilities</p>
+                      <ul className="list-disc ms-5 mt-3 md:mt-2.5 flex flex-col gap-5 text-blue-50">
+                        {card.responsibilities.map((responsibility, index) => (
+                          <li key={index} className="text-lg">
+                            {responsibility}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
-                       <div className="timeline-logo baseBorder baseBgBtn z-20">
-                    <img className="size-12.5" src={card.logoPath} alt="logo" />
                   </div>
- 
-                  <div className="w-[80%] xl:w-[85%] mb-7.5 xl:mb-0">
-                    <h1 className="font-semibold text-3xl">{card.title}</h1>
-                    <p className="mt-2 md:mt-3.5 mb-6 text-gold-50 flex items-center gap-2">
-                      <Icon icon="akar-icons:calendar" color="#D5892C" />
-                      {card.date}
-                    </p>
-                    <p className="text-[#5593DE] ">Responsibilities</p>
-                    <ul className="list-disc ms-5 mt-3 md:mt-2.5 flex flex-col gap-5 text-blue-50">
-                      {card.responsibilities.map((responsibility, index) => (
-                        <li key={index} className="text-lg">
-                          {responsibility}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
                 </div>
               </div>
-               </div>
-            ))}
-          {/* </div> */}
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -159,5 +144,3 @@ const ExperienceSection = () => {
 };
 
 export default ExperienceSection;
-
-// card bg  background: linear-gradient(103.4deg, #04071D 16.66%, #0C0E23 81.61%);

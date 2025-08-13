@@ -3,7 +3,7 @@ import ContactModal from "../Contact/ContactModal";
 
 const Footer = () => {
   return (
-    <footer className="w-dvw h-[500px] text-center mt-25 md:mt-35" id="contact">
+    <footer id="contact" className="w-dvw h-[500px] text-center mt-25 md:mt-35">
       <img
         src="/images/footerBg.webp"
         alt="grid"

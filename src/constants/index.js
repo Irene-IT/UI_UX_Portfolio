@@ -33,7 +33,7 @@ const gridItems = [
     title: "I'm very flexible with time zone communications",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "absolute size-full object-cover object-center bottom-0 mix-blend-screen bg-linear-[103.4deg,#04071d_16.66%,#0c0e23_81.61%]",
+    imgClassName: "absolute size-full bottom-0 mix-blend-screen bg-linear-[103.4deg,#04071d_16.66%,#0c0e23_81.61%]",
     titleClassName: "justify-start",
     img: "/images/grid/blockPlanet.webp",
     spareImg: "/images/grid/grid.svg",
@@ -81,146 +81,68 @@ const gridItems = [
   },
 ];
 
-// const words = [
-//   { text: "Ideas", imgPath: "/images/ideas.svg" },
-//   { text: "Concepts", imgPath: "/images/concepts.svg" },
-//   { text: "Designs", imgPath: "/images/designs.svg" },
-//   { text: "Code", imgPath: "/images/code.svg" },
-//   { text: "Ideas", imgPath: "/images/ideas.svg" },
-//   { text: "Concepts", imgPath: "/images/concepts.svg" },
-//   { text: "Designs", imgPath: "/images/designs.svg" },
-//   { text: "Code", imgPath: "/images/code.svg" },
-// ];
-
-// const counterItems = [
-//   { value: 15, suffix: "+", label: "Years of Experience" },
-//   { value: 200, suffix: "+", label: "Satisfied Clients" },
-//   { value: 108, suffix: "+", label: "Completed Projects" },
-//   { value: 90, suffix: "%", label: "Client Retention Rate" },
-// ];
-
-
-//  const logoIconsListBento = [
-//     {
-//       imgPath: "/images/grid/AITools.svg",
-//       name: "AI Tools",
-//     },
-//     {
-//       imgPath: "/images/grid/adobe.svg",
-//       name: "Adobe",
-//     },
-//     {
-//       imgPath: "/images/grid/figma.svg",
-//       name: "Figma",
-//     },
-//     {
-//       imgPath: "/images/grid/webflow.svg",
-//       name: "Webflow",
-//     },
-//     {
-//       imgPath: "/images/grid/framer.svg",
-//       name: "Framer",
-//     },
-//     {
-//       imgPath: "/images/grid/blender.svg",
-//       name: "Blender",
-//     },
-
-
-//   ];
-
-
-// const logoIconsList = [
-//   {
-//     imgPath: "/images/logos/company-logo-1.png",
-//     name: "Logo Adobe",
-//   },
-//   {
-//     imgPath: "/images/logos/company-logo-2.png",
-//     name: "Logo Shopify",
-//   },
-//   {
-//     imgPath: "/images/logos/company-logo-3.png",
-//     name: "Logo Blender",
-//   },
-//   {
-//     imgPath: "/images/logos/company-logo-4.png",
-//     name: "Logo Microsoft",
-//   },
-//   // COPY 2's!!! This is important for if not enough logos to fill the screen, the animation will not break.
-// ];
-
-// const abilities = [
-//   {
-//     imgPath: "/images/seo.png",
-//     title: "Quality Focus",
-//     desc: "Delivering high-quality results while maintaining attention to every detail.",
-//   },
-//   {
-//     imgPath: "/images/chat.png",
-//     title: "Reliable Communication",
-//     desc: "Keeping you updated at every step to ensure transparency and clarity.",
-//   },
-//   {
-//     imgPath: "/images/time.png",
-//     title: "On-Time Delivery",
-//     desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
-//   },
-// ];
-
-const techStackImgs = [
+const projects = [
   {
-    name: "React Developer",
-    imgPath: "/images/logos/react.png",
+    id: 1,
+    title: "Mobile ELD application",
+    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+    iconLists: ["/images/logos/figma.svg", "/images/logos/ai.svg",],
+    link: "https://www.behance.net/gallery/217833303/Conejo", 
+    className: "bg-prod1",
   },
   {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
+    id: 2,
+    title: "Hospitality service provider page",
+    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
+    img: "/images/hospitality.webp",
+    iconLists: ["/images/logos/figma.svg", "/images/logos/ai.svg",],
+    link: "https://www.behance.net/gallery/228367673/Ardilla",
+    className: "bg-prod2",
   },
   {
-    name: "Backend Developer",
-    imgPath: "/images/logos/node.png",
+    id: 3,
+    title: "SaaS product landing page",
+    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech.",
+    img: "/images/SaaS.webp",
+    iconLists: ["/images/logos/figma.svg", "/images/logos/fi.svg", "/images/logos/ai.svg", "/images/logos/blender.svg",],
+     link: "https://www.behance.net/gallery/215005703/Burro",
+    className: "bg-prod1",
   },
   {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
-  },
-  {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
+    id: 4,
+    title: "EV charging application",
+    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects.",
+    img: "/images/AV.png",
+    iconLists: ["/images/logos/figma.svg", "/images/logos/fi.svg", "/images/logos/ai.svg", "/images/logos/blender.svg",],
+    link: "#",
+    className: "bg-prod2",
   },
 ];
 
-const techStackIcons = [
-  {
-    name: "React Developer",
-    modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
-    rotation: [0, 0, 0],
+const testimonials = [
+  {id:1,
+    name: "Chelsey Dietrich",
+    title: "Director of AlphaStream Technologies",
+    avatar: "/images/avatar1.png",
+    text: `Dmitry quickly grasped the nuances of our B2B SaaS platform and transformed complex workflows into a clean, intuitive interface. What impressed us most was how he worked alongside our developers—speaking their language, anticipating edge cases, and pushing for design consistency without sacrificing functionality. He’s a rare hybrid of creative and practical.`,
   },
-  {
-    name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
+  {id:2,
+    name: "Patricia Lebsack",
+    title: "Executive Director at BridgeForward",
+    avatar: "/images/avatar1.png",
+    text: `Our organization supports people with varying levels of digital literacy, and Dmitry understood that from day one. He approached our redesign with compassion, curiosity, and deep user empathy. The new experience is beautiful, but more importantly—it’s accessible and welcoming. He made something complex feel effortless.`,
   },
-  {
-    name: "Backend Developer",
-    modelPath: "/models/node-transformed.glb",
-    scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
+  {id:3,
+    name: "Ian Hefeldinger",
+    title: "Founder of A-Team Global",
+    avatar: "/images/avatar1.png",
+    text: `Dmitry didn’t just redesign our store—he redefined how customers experience our brand. He nailed the vibe, smoothed out the purchase flow, and introduced thoughtful touches that actually boosted conversion. I’ve worked with designers who make things pretty. Dmitry makes things work and sell.`,
   },
-  {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Project Manager",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
+  {id:4,
+    name: "Adrian Hernandez",
+    title: "Product Manager at StratifyHQ",
+    avatar: "/images/avatar1.png",
+    text: `Whether it was a mobile app, marketing site, or experimental concept—we threw everything at Dmitry, and he delivered every time. He moves fast, asks the right questions, and always brings options to the table. He’s not just reliable—he’s one of the few designers we actually look forward to collaborating with.`,
   },
 ];
 
@@ -266,88 +188,6 @@ const expCards = [
   },
 ];
 
-const expLogos = [
-  {
-    name: "logo1",
-    imgPath: "/images/logo1.png",
-  },
-  {
-    name: "logo2",
-    imgPath: "/images/logo2.png",
-  },
-  {
-    name: "logo3",
-    imgPath: "/images/logo3.png",
-  },
-];
-
-const projects = [
-  {
-    id: 1,
-    title: "Mobile ELD application",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    // img: ["/images/mobile-left.png", "/images/mobile-right.png" ],
-    iconLists: ["/images/logos/figma.svg", "/images/logos/ai.svg",],
-    link: "https://www.behance.net/gallery/215005703/Burro",
-    className: "bg-prod1",
-  },
-  {
-    id: 2,
-    title: "Hospitality service provider page",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/images/hospitality.webp",
-    iconLists: ["/images/logos/figma.svg", "/images/logos/ai.svg",],
-    link: "https://www.behance.net/gallery/228367673/Ardilla",
-    className: "bg-prod2",
-  },
-  {
-    id: 3,
-    title: "SaaS product landing page",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech.",
-    img: "/images/SaaS.webp",
-    iconLists: ["/images/logos/figma.svg", "/images/logos/fi.svg", "/images/logos/ai.svg", "/images/logos/blender.svg",],
-    link: "/ui.aiimg.com",
-    className: "bg-prod1",
-  },
-  {
-    id: 4,
-    title: "EV charging application",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects.",
-    img: "/images/AV.png",
-    iconLists: ["/images/logos/figma.svg", "/images/logos/fi.svg", "/images/logos/ai.svg", "/images/logos/blender.svg",],
-    link: "/ui.apple.com",
-    className: "bg-prod2",
-  },
-];
-
-// Section Testimonials | Carousel 
-const testimonials = [
-  {id:1,
-    name: "Chelsey Dietrich",
-    title: "Director of AlphaStream Technologies",
-    avatar: "/images/avatar1.png",
-    text: `Dmitry quickly grasped the nuances of our B2B SaaS platform and transformed complex workflows into a clean, intuitive interface. What impressed us most was how he worked alongside our developers—speaking their language, anticipating edge cases, and pushing for design consistency without sacrificing functionality. He’s a rare hybrid of creative and practical.`,
-  },
-  {id:2,
-    name: "Patricia Lebsack",
-    title: "Executive Director at BridgeForward",
-    avatar: "/images/avatar1.png",
-    text: `Our organization supports people with varying levels of digital literacy, and Dmitry understood that from day one. He approached our redesign with compassion, curiosity, and deep user empathy. The new experience is beautiful, but more importantly—it’s accessible and welcoming. He made something complex feel effortless.`,
-  },
-  {id:3,
-    name: "Ian Hefeldinger",
-    title: "Founder of A-Team Global",
-    avatar: "/images/avatar1.png",
-    text: `Dmitry didn’t just redesign our store—he redefined how customers experience our brand. He nailed the vibe, smoothed out the purchase flow, and introduced thoughtful touches that actually boosted conversion. I’ve worked with designers who make things pretty. Dmitry makes things work and sell.`,
-  },
-  {id:4,
-    name: "Adrian Hernandez",
-    title: "Product Manager at StratifyHQ",
-    avatar: "/images/avatar1.png",
-    text: `Whether it was a mobile app, marketing site, or experimental concept—we threw everything at Dmitry, and he delivered every time. He moves fast, asks the right questions, and always brings options to the table. He’s not just reliable—he’s one of the few designers we actually look forward to collaborating with.`,
-  },
-];
-
 const approachCards = [
   {
     id: 1,
@@ -375,9 +215,6 @@ const approachCards = [
   }
 ]
 
-
-
-
 const socialMedia = [
   {id:1,
     name: "insta",
@@ -394,18 +231,11 @@ const socialMedia = [
 ];
 
 export {
-  // words,
-  // abilities,
-  // logoIconsList,
-  // counterItems,
-  approachCards,
-  expCards,
-  expLogos,
-  projects,
-  testimonials,
-  socialMedia,
-  techStackIcons,
-  techStackImgs,
   navLinks,
   gridItems,
+  projects,
+  testimonials,
+  expCards,
+  approachCards,
+  socialMedia,
 };

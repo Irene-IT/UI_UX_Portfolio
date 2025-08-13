@@ -25,7 +25,7 @@ const GlowCard = ({ card, index, children }) => {
     card.style.setProperty("--start", angle + 60);
   };
 
- // return the card component with the mouse move event
+  // return the card component with the mouse move event
   return (
     <div
       ref={(el) => (cardRefs.current[index] = el)}
@@ -35,9 +35,8 @@ const GlowCard = ({ card, index, children }) => {
       <div className="glow"></div>
       <div className="flex items-center gap-1 mb-5">
         {Array.from({ length: 5 }, (_, i) => (
-          <img key={i} src="/images/star.png" alt="star" className="w-5 h-4.5 drop-shadow-[0px_4px_13px_rgba(255,225,0,0.32)]" />
+          <div key={i} className="star"></div>
         ))}
-       
       </div>
       <div className="mb-5">
         <p>{card.review}</p>
