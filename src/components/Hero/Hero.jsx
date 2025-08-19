@@ -6,11 +6,11 @@ const Hero = () => {
     <section
       id="hero"
       className="relative overflow-hidden h-dvh md:h-screen w-dvw flex-col justify-end items-center text-center"
+      aria-label="hero section"
     >
-      <div
-        className="absolute top-0 left-0 w-dvw md:w-screen h-full rotate-180
-        bg-radial from-white from-26% to-white to-100%"
-      >
+      <div className="absolute top-0 left-0 w-dvw md:w-screen h-full rotate-180 bg-radial from-white from-26% to-white to-100%">
+        <div className="absolute inset-y-0 left-0 size-full bg-gradient-to-b from-black z-10"></div>
+
         <div className="bg-[url(/images/headerGridPattern.webp)] z-50 absolute top-0 left-0 rotate-180 size-full object-cover"></div>
         <BgGradientAnimation />
       </div>

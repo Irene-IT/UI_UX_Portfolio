@@ -89,9 +89,9 @@ const ExperienceSection = () => {
   }, []);
 
   return (
-    <section id="experience" className="flex-center section-padding">
+    <section id="experience" className="flex-center section-padding" aria-labelledby="experience-title">
       <div className="size-full md:px-20">
-        <h2>Work experience</h2>
+        <h2 id="experience-title">Work experience</h2>
         <div className="relative mt-12.5 xl:mt-15 w-full z-50 xl:space-y-24 space-y-15">
           {expCards.map((card) => (
             <div key={card.id} className="exp-card-wrapper">

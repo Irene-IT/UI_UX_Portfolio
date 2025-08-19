@@ -3,7 +3,7 @@ import { BentoGrid, BentoGridItem } from "./BentoGrid";
 
 const About = () => {
   return (
-    <section id="about" className="flex-center section-padding">
+    <section id="about" className="flex-center section-padding" aria-label="about">
       <div className="size-full md:px-20">
         <BentoGrid className="w-full">
           {gridItems.map((item) => (

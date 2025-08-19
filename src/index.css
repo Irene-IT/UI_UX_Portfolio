@@ -226,12 +226,34 @@ span {
   }
 
   .actionBtn {
-    @apply md:w-47.5 md:h-15 w-41.5 h-12 text-white rounded-full font-medium text-sm md:text-base whitespace-nowrap cursor-pointer bg-linear-[96.68deg,#3344F6_5.98%,#4A2486_87.41%];
+    @apply w-41.5 md:w-47.5 h-12 md:h-15 text-white rounded-full font-medium text-sm md:text-base whitespace-nowrap cursor-pointer bg-linear-[96.68deg,#3344F6_5.98%,#4A2486_87.41%];
   }
 }
 
 @layer components {
-  /* section Hero - START */
+  
+  /* NavBar - START */
+  .navbar {
+    @apply fixed w-[90vw] md:w-[60vw] xl:w-[30vw] left-1/2 -translate-x-1/2 top-4 md:top-8 z-60 inset-x-auto p-5 rounded-xl;
+
+    nav.desktop {
+      @apply relative  w-auto flex items-center justify-center flex-row;
+
+      ul {
+        @apply w-full text-center flex justify-around items-center whitespace-pre-wrap;
+
+        li.group a {
+          @apply relative text-blue-50 text-sm md:text-base font-light transition duration-300 ease-in-out transform;
+        }
+        li a.active {
+          @apply flex items-center gap-3 justify-center flex-col font-semibold;
+        }
+      }
+    }
+  }
+  /* NavBar - END */
+
+  /* Hero - START */
   .hero-layout {
     @apply relative w-full h-[75%] flex items-center justify-center;
   }
@@ -251,69 +273,7 @@ span {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  /* section Hero - END */
-
-  /* section NavBar - START */
-  .navbar {
-    @apply fixed w-[90vw] md:w-[60vw] xl:w-[30vw] left-1/2 -translate-x-1/2 top-4 md:top-8 z-60 inset-x-auto p-5 rounded-xl;
-
-    nav.desktop {
-      @apply relative  w-auto flex items-center justify-center flex-row;
-
-      ul {
-        @apply w-full text-center flex justify-around items-center whitespace-pre-wrap;
-
-        li.group a {
-          @apply relative text-blue-50 text-sm md:text-base font-light transition duration-300 ease-in-out transform;
-        }
-        li a.active {
-          @apply flex items-center gap-3 justify-center flex-col font-semibold;
-        }
-      }
-    }
-  }
-
-  /* section NavBar - END */
-
-  .app-showcase {
-    @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
-
-    .showcaselayout {
-      @apply flex xl:flex-row flex-col gap-10 justify-between;
-    }
-
-    .first-project-wrapper {
-      @apply h-full flex flex-col justify-between xl:w-[60%];
-
-      .text-content {
-        @apply space-y-5 mt-5;
-
-        .badges {
-          @apply flex gap-2 mb-4;
-        }
-
-        h2 {
-          @apply text-2xl md:text-3xl lg:text-4xl font-bold;
-        }
-      }
-    }
-
-    .project-list-wrapper {
-      @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
-
-      .image-wrapper {
-        @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
-      }
-
-      img {
-        @apply size-full object-contain rounded-xl;
-      }
-
-      h2 {
-        @apply text-lg md:text-xl lg:text-2xl font-semibold mt-5;
-      }
-    }
-  }
+  /* Hero - END */
 
   /* RecentProgects - START */
   .bg-prod-light {
@@ -365,7 +325,7 @@ span {
   }
   /* RecentProgects - END */
 
-  /* Section Testimonials | Carusel - START */
+  /* Testimonials | Carusel - START */
   .bg-card {
     @apply shadow-[0px_1rem_1.5rem_-0.9rem_#000000e1] p-px rounded-3xl w-3/4 md:w-2/4 border border-solid border-slateBlue/[0.3] bg-linear-[103.4deg,#04071D_16.66%,#0C0E23_81.61%];
   }
@@ -376,11 +336,10 @@ span {
   }
 
   .btn-arrow {
-    @apply size-10.5 rounded-full bg-[#1F2243]  active:bg-[#253563] hover:bg-[#253563]/80
-    
+    @apply size-10.5 rounded-full bg-[#1F2243] active:bg-[#253563] hover:bg-[#253563]/80
     hidden md:flex justify-center items-center;
   }
-  /* Section Testimonials | Carusel - END */
+  /* Testimonials | Carusel - END */
 
   /* ExperienceSection - START */
   .glow {
@@ -420,30 +379,6 @@ span {
     @apply text-center opacity-100 relative transition duration-200 ease-in-out transform -translate-y-2;
   }
   /* Approach - END */
-
-  .gradient-edge {
-    @apply w-36 h-full absolute bottom-0 z-20;
-  }
-
-  .tech-card-animated-bg {
-    @apply absolute left-0 bottom-[-100%] w-full h-full bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
-  }
-
-  .tech-card-content {
-    @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
-
-    & p {
-      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center;
-    }
-  }
-
-  .tech-grid {
-    @apply grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 xl:gap-16 md:gap-10 gap-5 mt-16;
-  }
-
-  .tech-icon-wrapper {
-    @apply flex justify-center items-center w-52 h-60 relative;
-  }
 
   /* Footer - START */
   form {

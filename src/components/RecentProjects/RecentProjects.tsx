@@ -2,9 +2,9 @@ import { projects } from "@/constants";
 
 const RecentProjects = () => {
   return (
-    <section id="projects" className="flex-center section-padding">
+    <section id="projects" className="flex-center section-padding" aria-labelledby="projects-title">
       <div className="flex-col-center gap-15 size-full md:px-20">
-        <h2 className="text-center">Some of my recent projects</h2>
+        <h2 id="projects-title" className="text-center">Some of my recent projects</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-10">
           {projects.map((item) => (
             <div
@@ -61,8 +61,9 @@ const RecentProjects = () => {
 
                   <a
                     href={item.link}
-                    className="text-sm font-medium text-center text-[--color-blue-50] px-4 py-2.5 rounded-[44px] bg-[#1f2243] "
+                    className="text-sm font-medium text-center text-[--color-blue-50] px-4 py-2.5 rounded-[44px] bg-[#1f2243]"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Check Live Site
                   </a>
