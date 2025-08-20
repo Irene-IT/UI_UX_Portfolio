@@ -31,6 +31,5 @@
     ".next/types/**/*.ts",
     "src/sections/Footer.jsx"
 , "src/components/Approach/Approach.jsx", "src/hooks/ActiveSectionContext.tsx"  ],
-  // "exclude": ["node_modules"]
   "exclude": ["./node_modules"]
 }
