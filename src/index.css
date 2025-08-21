@@ -1,16 +1,6 @@
 @font-face {
   font-family: "Poppins";
   src:
-    url("fonts/Poppins-SemiBold.woff2") format("woff2"),
-    url("fonts/Poppins-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src:
     url("fonts/Poppins-Regular.woff2") format("woff2"),
     url("fonts/Poppins-Regular.woff") format("woff");
   font-weight: normal;
@@ -48,6 +38,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Poppins";
+  src:
+    url("fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -77,9 +77,6 @@ section {
   display: flex;
 }
 
-span {
-  font-family: "Poppins";
-}
 
 @theme {
   --font-sans: "Poppins", sans-serif;
@@ -171,24 +168,25 @@ span {
 
 @layer base {
   h1 {
-    @apply font-medium z-20;
+    @apply font-sans font-medium z-20;
     font-size: min(6vw, 60px);
   }
 
   h2 {
-    @apply font-semibold text-3xl md:text-5xl text-center text-pretty leading-[120%];
+    @apply font-sans font-semibold text-3xl md:text-5xl text-center text-pretty leading-[120%];
   }
 
-  /* h3 {
-    @apply font-medium md:text-[32px] text-3xl;
-  } */
   h3 {
-    @apply text-xl md:text-[32px] font-bold md:font-medium;
+    @apply font-sans font-bold md:font-medium text-xl md:text-[32px];
   }
 
   p {
-    @apply text-base lg:text-xl font-light text-blue-50;
+    @apply font-sans font-light text-base lg:text-xl text-blue-50;
   }
+
+  span {
+  @apply font-sans;
+}
 }
 
 @layer utilities {
