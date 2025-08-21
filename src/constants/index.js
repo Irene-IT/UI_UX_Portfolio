@@ -218,15 +218,18 @@ const approachCards = [
 const socialMedia = [
   {id:1,
     name: "insta",
-    imgPath: "/images/insta.svg",
+    imgPath: "/images/Insta.svg",
+    linkPath: "#",
   },
   {id:2,
     name: "twit",
-    imgPath: "/images/twit.svg",
+    imgPath: "/images/Twit.svg",
+    linkPath: "#",
   },
   {id:3,
     name: "linkedin",
-    imgPath: "/images/linkedin.svg",
+    imgPath: "/images/Link.svg",
+    linkPath: "https://www.linkedin.com/in/dmtrmw/",
   },
 ];
 

@@ -20,9 +20,11 @@ const Hero = () => {
           <div className="hero-text">
             <div className="flex-center">
               <img
-                src="/images/MB4x.webp"
+                src="/images/MB2x.webp"
+                srcSet="/images/MB2x.webp 1x, /images/MB4x.webp 2x"
                 alt="Transforming ideas into"
                 className="lg:w-[820px] min-w-[200px]"
+                fetchPriority="high"
               />
             </div>
 
