@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Poppins";
   src:
-    url("fonts/Poppins-Regular.woff2") format("woff2"),
-    url("fonts/Poppins-Regular.woff") format("woff");
+    url("/fonts/Poppins-Regular.woff2") format("woff2"),
+    url("/fonts/Poppins-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,8 @@
 @font-face {
   font-family: "Poppins";
   src:
-    url("fonts/Poppins-Light.woff2") format("woff2"),
-    url("fonts/Poppins-Light.woff") format("woff");
+    url("/fonts/Poppins-Light.woff2") format("woff2"),
+    url("/fonts/Poppins-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -21,8 +21,8 @@
 @font-face {
   font-family: "Poppins";
   src:
-    url("fonts/Poppins-Bold.woff2") format("woff2"),
-    url("fonts/Poppins-Bold.woff") format("woff");
+    url("/fonts/Poppins-Bold.woff2") format("woff2"),
+    url("/fonts/Poppins-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -31,8 +31,8 @@
 @font-face {
   font-family: "Poppins";
   src:
-    url("fonts/Poppins-Medium.woff2") format("woff2"),
-    url("fonts/Poppins-Medium.woff") format("woff");
+    url("/fonts/Poppins-Medium.woff2") format("woff2"),
+    url("/fonts/Poppins-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -41,8 +41,8 @@
 @font-face {
   font-family: "Poppins";
   src:
-    url("fonts/Poppins-SemiBold.woff2") format("woff2"),
-    url("fonts/Poppins-SemiBold.woff") format("woff");
+    url("/fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("/fonts/Poppins-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -167,26 +167,27 @@ section {
 }
 
 @layer base {
+   h1, h2, h3, button, span, ul, li, a, input,
+    textarea, label, :active, :focus {
+    @apply font-sans;
+  }
+
   h1 {
-    @apply font-sans font-medium z-20;
+    @apply font-medium z-20;
     font-size: min(6vw, 60px);
   }
 
   h2 {
-    @apply font-sans font-semibold text-3xl md:text-5xl text-center text-pretty leading-[120%];
+    @apply font-semibold text-3xl md:text-5xl text-center text-pretty leading-[120%];
   }
 
   h3 {
-    @apply font-sans font-bold md:font-medium text-xl md:text-[32px];
+    @apply font-bold md:font-medium text-xl md:text-[32px];
   }
 
   p {
-    @apply font-sans font-light text-base lg:text-xl text-blue-50;
-  }
-
-  span {
-  @apply font-sans;
-}
+    @apply font-light text-base lg:text-xl text-blue-50;
+  } 
 }
 
 @layer utilities {
