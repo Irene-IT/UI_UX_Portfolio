@@ -322,6 +322,7 @@ section {
   .mobile-frame {
     @apply relative size-full transition duration-700 ease-in-out mx-[-33px] object-cover;
   }
+
   /* RecentProgects - END */
 
   /* Testimonials | Carusel - START */
