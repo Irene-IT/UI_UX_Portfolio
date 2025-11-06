@@ -1,12 +1,40 @@
-# React + Vite
+## 💡 Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**UI/UX DP** is a learning-oriented web project created as part of an introduction to modern frontend development tools and workflows.  
+The main focus is on user interface design, interactivity, and smooth animation effects.  
 
-Currently, two official plugins are available:
+The project is currently in active development — new features, design improvements, and code refinements are introduced periodically.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🎯 Purpose and Functionality
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The goal of this project is to explore the process of building a modern, visually appealing, and interactive web interface using current frontend technologies.  
+
+Key objectives include:
+- Developing a responsive design using **Tailwind CSS**  
+- Integrating **3D elements** with **Three.js** and **React Three Fiber**  
+- Implementing **animations and transitions** with **GSAP**  
+- Enabling **form submissions** via **EmailJS** without a backend  
+- Enhancing **user experience (UX)** through iterative testing and UI refinements  
+
+The project serves as a hands-on environment for learning and experimenting with the modern React ecosystem and related tools.
+
+---
+
+## 🛠️ Technologies Used
+
+This project is built with a range of modern libraries and frameworks that support fast development and modular structure.  
+It represents an early stage of exploration and will continue to evolve as new techniques are learned and implemented.
+
+**Main technologies and tools:**
+- **Vite** — build tool for fast development and production-ready builds  
+- **React (v19)** — UI library for component-based architecture  
+- **Tailwind CSS** and **Material Tailwind** — for styling and responsive layout design  
+- **GSAP** and **Motion** — for smooth, performant animations  
+- **Three.js**, **@react-three/fiber**, **@react-three/drei**, **@react-three/postprocessing** — for 3D graphics and interactive visual elements  
+- **EmailJS** — for handling form submissions without a backend  
+- **ESLint**, **PostCSS**, **Autoprefixer** — for code quality and CSS processing  
+- **Lucide React** and **Iconify** — for icons and UI visuals  
+
+The project is deployed on **[Netlify](https://ui-ux-dp.netlify.app/)**.
