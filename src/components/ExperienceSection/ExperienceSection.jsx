@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
+import CalendarIcon from "@iconify-json/akar-icons/icons/calendar.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -120,7 +121,7 @@ const ExperienceSection = () => {
                     <div className="w-[80%] xl:w-[85%] mb-7.5 xl:mb-0">
                       <h3>{card.title}</h3>
                       <p className="mt-2 md:mt-3.5 mb-6 text-gold-50 flex items-center gap-2">
-                        <Icon icon="akar-icons:calendar" />
+                        <Icon icon="CalendarIcon" />
                         {card.date}
                       </p>
                       <p className="text-[#5a9bea] ">Responsibilities</p>
