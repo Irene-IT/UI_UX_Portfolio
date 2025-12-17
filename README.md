@@ -1,6 +1,5 @@
 ## 💡 Project
-
-**UI/UX DP** is a learning-oriented web project created as part of an introduction to modern frontend development tools and workflows.  
+ 
 The main focus is on user interface design, interactivity, and smooth animation effects.  
 
 The project is currently in active development — new features, design improvements, and code refinements are introduced periodically.
